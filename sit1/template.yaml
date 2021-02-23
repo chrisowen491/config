@@ -19,6 +19,7 @@ Parameters:
     Default: sit1
     Description: The name of the environment to deploy to
     AllowedValues:
+    - local
     - sit1
     - pre1
     - prod1
@@ -84,7 +85,7 @@ Resources:
   tranmere6:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://tranmere-web-api/8caa77858dfbdbeb33a9832c70387b0a
+      CodeUri: s3://tranmere-web-api/1300ac6680ec44bc3c38d860839e6254
       Handler: tranmere6.handler
       Runtime: nodejs12.x
       DeploymentPreference:
