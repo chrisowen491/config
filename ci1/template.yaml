@@ -16,7 +16,7 @@ Parameters:
     Default: openapi.yaml
   EnvName:
     Type: String
-    Default: sit1
+    Default: local
     Description: The name of the environment to deploy to
     AllowedValues:
     - local
