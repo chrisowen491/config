@@ -35,39 +35,7 @@ Resources:
     Properties:
       StageName: Prod
       Name: tranmere6
-      GatewayResponses:
-        UNAUTHORIZED:
-          StatusCode: 401
-          ResponseParameters:
-            Headers:
-              Access-Control-Allow-Origin: '''*'''
-        ACCESS_DENIED:
-          StatusCode: 403
-          ResponseParameters:
-            Headers:
-              Access-Control-Allow-Origin: '''*'''
-        INVALID_API_KEY:
-          StatusCode: 200
-          ResponseParameters:
-            Headers:
-              Access-Control-Allow-Origin: '''*'''
-              Access-Control-Allow-Headers: '''x-api-key,content-type'''
-        MISSING_AUTHENTICATION_TOKEN:
-          StatusCode: 403
-          ResponseParameters:
-            Headers:
-              Access-Control-Allow-Origin: '''*'''
-        DEFAULT_5XX:
-          StatusCode: 500
-          ResponseParameters:
-            Headers:
-              Access-Control-Allow-Origin: '''*'''
-        RESOURCE_NOT_FOUND:
-          StatusCode: 404
-          ResponseParameters:
-            Headers:
-              Access-Control-Allow-Origin: '''*'''
-      DefinitionUri: s3://tranmere-web-api/a044f804f9069f4d8161013ee8c5996a
+      DefinitionUri: s3://tranmere-web-api/2c80d2075cdd82a5faf14f48e1d97df8
   tranmere6:
     Type: AWS::Serverless::Function
     Properties:
