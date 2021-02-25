@@ -9,22 +9,20 @@ Parameters:
   Deployment:
     Type: String
     Default: Canary10Percent5Minutes
-  S3BucketName:
-    Type: String
-  SwaggerFile:
-    Type: String
-    Default: swagger.yaml
   EnvName:
     Type: String
     Default: sit1
     Description: The name of the environment to deploy to
     AllowedValues:
     - local
+    - ci1
     - sit1
     - pre1
     - prod1
 Mappings:
   SpecialFeature1:
+    ci1:
+      answer: 1
     sit1:
       answer: 1
     pre1:
@@ -71,17 +69,7 @@ Resources:
           ResponseParameters:
             Headers:
               Access-Control-Allow-Origin: '''*'''
-      DefinitionBody:
-        Fn::Transform:
-          Name: AWS::Include
-          Parameters:
-            Location:
-              Fn::Join:
-              - ''
-              - - s3://
-                - Ref: S3BucketName
-                - /
-                - Ref: SwaggerFile
+      DefinitionUri: s3://tranmere-web-api/a044f804f9069f4d8161013ee8c5996a
   tranmere6:
     Type: AWS::Serverless::Function
     Properties:
