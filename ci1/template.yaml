@@ -56,7 +56,7 @@ Resources:
   tranmere6:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://tranmere-web-api/chrisowen491/demo-api/9826eee40843dc30005916ec990c6ca8
+      CodeUri: s3://tranmere-web-api/chrisowen491/demo-api/f751a3607ba85ea3e4f240f77bae8fd5
       Handler: tranmere6.handler
       Runtime: nodejs12.x
       DeploymentPreference:
